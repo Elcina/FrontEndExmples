@@ -1,0 +1,25 @@
+#listBlock
+{
+/*background-color: #EFEFF0; */
+float: left;
+margin-left: 40px;
+margin-top: 100px;
+}
+
+#addBlock
+{
+/*background-color: #00ACBF; */
+float: right;
+margin-right: 300px; 
+margin-top: 150px;
+}
+
+#infoBlock
+{
+visibility: hidden;
+}
+
+#add
+{
+text-decoration: underline
+}

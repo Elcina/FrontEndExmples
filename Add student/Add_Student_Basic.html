@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+function addStudent(){
+  var node = "<li>"+ $("#name").val() + "</li>" ;
+        $("ol").append(node);
+		$("#name").val("");
+	  
+}
+$(document).ready(function(){
+  $("#btn").click(addStudent);
+});
+</script>
+</head>
+<body>
+<h2>List of Students</h2>
+<br>
+<p id="add">Add more..</p>
+<div id="addBlock">
+<input id="name"></input><br><br>
+<button id="btn">Add Student</button>
+</div>
+<ol>
+   <li>John Smith </li>
+   <li>Mike Sullivan </li>
+   <li>Raj Kumar </li>
+</ol>
+</body>
+</html>

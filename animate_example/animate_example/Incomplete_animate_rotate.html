@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.10.2.js">
+</script>
+<script> 
+$(document).ready(function(){
+
+  $("button").click(function(){
+    $("div").animate({left:'250px'});
+	$("div").animate({top:'250px'});
+	$("div").animate({left:'10px'});
+	$("div").animate({top:'110px'});
+  });
+});
+</script> 
+</head>
+ 
+<body>
+<h1>Animation Example</h1>
+<button>Start Animation</button>
+<p></p>
+<div id="myImage" style="position:absolute;">
+<img src="smiley_happy.jpg">
+</div>
+
+</body>
+</html>

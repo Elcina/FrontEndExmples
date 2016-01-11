@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="AddStudent.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+var d = new Date("2011-02-07");  
+alert(d);  
+function addStudent(){
+  var node = "<li>"+ $("#name").val() +" , "+$("#strtDate").val()+ "</li>" ;
+        $("ol").append(node);
+		$("#name").val("");
+		$("#strtDate").val("");
+		$("#endDate").val("");
+		
+	  
+}
+
+function delLast(){
+	$('#stuList li:last').remove();
+	  
+}
+
+function clrList(){
+	$('#stuList li').remove();
+	  
+}
+  
+$(document).ready(function(){
+	$("#btnAddStdt").click(addStudent);
+	$("#btnDelLast").click(delLast);
+	$("#btnClrList").click(clrList);
+	$( "#strtDate" ).datepicker({
+		changeMonth: true,
+		changeYear: true
+    });
+	$( "#endDate" ).datepicker({
+		changeMonth: true,
+		changeYear: true
+    });
+	$("#add").mouseover(function(){
+		$("#infoBlock").css("visibility","visible");
+	});
+	$("#addBlock").mouseleave(function(){
+		$("#infoBlock").css("visibility","hidden");
+	});
+	$("#ui-datepicker-div").mouseover(function(){
+		$("#infoBlock").css("visibility","visible");
+	});
+});
+</script>
+</head>
+<body>
+<h1 style="margin-left:600px;">Add Student Example</h1>
+<div id="listBlock">
+	<h3>List of Students</h3>
+	<ol id="stuList">
+		<li>John Smith , 11/04/2013</li>
+		<li>Mike Sullivan , 11/05/2013</li>
+		<li>Raj Kumar , 11/06/2013</li>
+	</ol>
+	
+	<button id="btnDelLast">Delete Last</button>
+	</br>
+	<button id="btnClrList">Clear List</button>
+</div>
+
+<div id="addBlock">
+	<p id="add">Add more..</p>
+	<div id="infoBlock">
+		Name:<input type="text" id="name"></input><br><br>
+		Start Date:<input type="text" id="strtDate"></input><br><br>
+		End Date:<input type="text" id="endDate"></input><br><br>
+		<button id="btnAddStdt">Add Student</button>
+	</div>
+</div>
+
+</body>
+</html>

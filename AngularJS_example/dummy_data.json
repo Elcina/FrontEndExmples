@@ -1,0 +1,15 @@
+{ "employees":[
+	{
+	  "name":"Raj",
+	   "age": 31,
+	   "skill":"JQuery, AngularJS",
+	   "address":"1234 Stevens street, San Jose, CA"
+	},
+	{
+	  "name":"John Smith",
+	   "age": 22,
+	   "skill":"Java, SQL, AngularJS",
+	   "address":"4444 Fremont street, Fremont, CA"
+	}
+]
+}
